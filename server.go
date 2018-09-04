@@ -60,7 +60,7 @@ func CreateUserEndPoint(w http.ResponseWriter, r *http.Request) {
 
 // PUT update an existing user
 func UpdateUserEndPoint(w http.ResponseWriter, r *http.Request) {
-	/*
+	//--------------------------------------------
 	buf, bodyErr := ioutil.ReadAll(r.Body)
 	if bodyErr != nil {
 		log.Print("bodyErr ", bodyErr.Error())
@@ -72,7 +72,7 @@ func UpdateUserEndPoint(w http.ResponseWriter, r *http.Request) {
 	rdr2 := ioutil.NopCloser(bytes.NewBuffer(buf))
 	log.Printf("BODY: %q", rdr1)
 	r.Body = rdr2
-	*/
+	//--------------------------------------------
 
 	defer r.Body.Close()
 	var user User
@@ -148,9 +148,6 @@ func DeleteUserEndPoint_BACKUP(w http.ResponseWriter, r *http.Request) {
 	respondWithJSON(w, http.StatusOK, map[string]string{"result": "success"})
 }
 
-
-
-
 // formatRequest generates ascii representation of a request
 func formatRequest(r *http.Request) string {
  // Create return string
@@ -177,8 +174,6 @@ func formatRequest(r *http.Request) string {
   // Return the request as a string
   return strings.Join(request, "\n")
 }
-
-
 
 func respondWithError(w http.ResponseWriter, code int, msg string) {
 	respondWithJSON(w, code, map[string]string{"error": msg})
