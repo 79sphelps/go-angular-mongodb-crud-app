@@ -3,7 +3,7 @@ package dao
 import (
 	"log"
 
-	. "github.com/79sphelps/movies-restapi/models"
+	. "github.com/79sphelps/go-angular-mongodb-crud-app/app_api/models"
 	mgo "gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 )

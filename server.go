@@ -12,9 +12,9 @@ import (
 	"bytes"
 
 	"github.com/gorilla/mux"
-	. "github.com/79sphelps/angular-go-restapi/config"
-	. "github.com/79sphelps/movies-restapi/dao"
-	. "github.com/79sphelps/movies-restapi/models"
+	. "github.com/79sphelps/go-angular-mongodb-crud-app/app_api/config"
+	. "github.com/79sphelps/go-angular-mongodb-crud-app/app_api/dao"
+	. "github.com/79sphelps/go-angular-mongodb-crud-app/app_api/models"
 )
 
 
